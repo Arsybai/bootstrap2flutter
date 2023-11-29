@@ -27,6 +27,62 @@ Bootstrap2Flutter is a repository that provides examples, code snippets, and res
 
 3. Use the provided code snippets and projects as a reference for incorporating Bootstrap-like designs into your Flutter applications.
 
+## Example
+As example if you want to use alert:
+```dart
+import 'package:flutter/material.dart';
+import 'alert.dart'; // Import the alert file
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter Bootstrap Alerts'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Use the showBootstrapAlert function to display alerts
+              showBootstrapAlert(
+                message: 'This is a primary alert!',
+                alertType: BootstrapAlertType.primary,
+              ),
+              showBootstrapAlert(
+                message: 'This is a secondary alert!',
+                alertType: BootstrapAlertType.secondary,
+              ),
+              showBootstrapAlert(
+                message: 'This is a success alert!',
+                alertType: BootstrapAlertType.success,
+              ),
+              showBootstrapAlert(
+                message: 'This is a danger alert!',
+                alertType: BootstrapAlertType.danger,
+              ),
+              showBootstrapAlert(
+                message: 'This is a warning alert!',
+                alertType: BootstrapAlertType.warning,
+              ),
+              showBootstrapAlert(
+                message: 'This is an info alert!',
+                alertType: BootstrapAlertType.info,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
 ## Contribution
 Contributions are welcome! If you have additional examples or resources to share, feel free to open issues, submit pull requests, or provide feedback.
 
